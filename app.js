@@ -1,0 +1,1 @@
+const menu=document.querySelector('.menu');const nav=document.querySelector('nav');menu?.addEventListener('click',()=>{nav.style.display=nav.style.display==='flex'?'none':'flex'});document.querySelectorAll('form').forEach(f=>f.addEventListener('submit',e=>{e.preventDefault();alert('お問い合わせありがとうございます。公開前に送信先を接続してください。')}));
