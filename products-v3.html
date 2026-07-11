@@ -7,18 +7,18 @@
 <meta name="description" content="研究・PoC・現場導入向けAIロボット製品ラインアップ。">
 <link rel="stylesheet" href="styles.css">
 <style>
-.product-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
-.product{display:flex;flex-direction:column;min-width:0;border:1px solid #dce8ed;border-radius:28px;overflow:hidden;background:#fff;box-shadow:0 12px 30px rgba(12,52,72,.06)}
-.product-visual.real{aspect-ratio:16/10;background:linear-gradient(145deg,#f4fbfd,#e6f4f8);display:grid;place-items:center;overflow:hidden}
-.product-visual.real img{width:100%;height:100%;display:block;object-fit:contain;padding:18px}
-.product-visual.real.cover img{object-fit:cover;padding:0;object-position:center}
+.product-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px;max-width:1220px;margin:auto}
+.product{display:flex;flex-direction:column;min-width:0;border:1px solid #dce8ed;border-radius:28px;overflow:hidden;background:#fff;box-shadow:0 14px 34px rgba(12,52,72,.07);transition:transform .2s,box-shadow .2s}
+.product:hover{transform:translateY(-4px);box-shadow:0 20px 46px rgba(12,52,72,.11)}
+.product-visual.real{aspect-ratio:16/10;background:linear-gradient(145deg,#f6fbfd,#e9f5f9);display:grid;place-items:center;overflow:hidden;border-bottom:1px solid #e5eef2}
+.product-visual.real img{width:100%;height:100%;display:block;object-fit:contain;padding:10px}
 .product-body{display:flex;flex-direction:column;flex:1;padding:28px}
-.product-body h2{font-size:clamp(1.7rem,3vw,2.4rem);margin:0 0 10px}
-.product-body>p:not(.kicker){color:#687982}
-.tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:auto;padding-top:12px}
+.product-body h2{font-size:clamp(1.7rem,3vw,2.4rem);margin:0 0 10px;line-height:1.2}
+.product-body>p:not(.kicker){color:#687982;margin:0 0 10px}
+.tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:auto;padding-top:14px}
 .tags span{font-size:.78rem;background:#eaf8fc;color:#17667f;padding:6px 10px;border-radius:999px;font-weight:800}
 .image-note{font-size:.78rem;color:#687982;text-align:center;margin-top:24px}
-@media(max-width:700px){.product-grid{grid-template-columns:1fr}.product-visual.real{aspect-ratio:4/3}.product-body{padding:22px}}
+@media(max-width:700px){.product-grid{grid-template-columns:1fr;gap:20px}.product-visual.real{aspect-ratio:16/10}.product-body{padding:22px}.product{border-radius:24px}}
 </style>
 </head>
 <body>
@@ -26,13 +26,13 @@
 <main>
 <section class="subhero"><p class="kicker">ROBOT PLATFORM</p><h1>研究・実装の目的から、<br>最適なロボットを選ぶ。</h1><p class="lead">研究テーマ、タスク、データ収集方法、SDK、制御環境、現場条件から候補を比較します。</p></section>
 <section class="section"><div class="product-grid">
-<article class="product"><div class="product-visual real cover"><img src="assets/agibot-g2.svg" alt="AgiBot G2" width="900" height="450" loading="eager" decoding="async" onerror="this.onerror=null;this.src='assets/image-fallback.svg'"></div><div class="product-body"><p class="kicker">MOBILE HUMANOID</p><h2>AgiBot G2</h2><p>移動・認識・把持・対話を統合した移動操作プラットフォーム。</p><div class="tags"><span>Manipulation</span><span>VLA</span><span>データ収集</span></div></div></article>
-<article class="product"><div class="product-visual real"><img src="https://www.unitree.com/images/a9884c71bc514abe8d928b58fad573fe_585x1270.png" alt="Unitree G1-D" width="585" height="1270" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='assets/image-fallback.svg'"></div><div class="product-body"><p class="kicker">DATA COLLECTION PLATFORM</p><h2>Unitree G1-D</h2><p>上半身操作、昇降機構、移動ベースを組み合わせた研究開発プラットフォーム。</p><div class="tags"><span>模倣学習</span><span>遠隔操作</span><span>双腕</span></div></div></article>
-<article class="product"><div class="product-visual real cover"><img src="https://www.unitree.com/images/b5fffd3e4fc04e6f9fcafedb9516b341_3840x2146.jpg" alt="Unitree Go2" width="3840" height="2146" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='assets/image-fallback.svg'"></div><div class="product-body"><p class="kicker">QUADRUPED</p><h2>Unitree Go2 / 四足ロボット</h2><p>SLAM、自律移動、屋外研究、センサー統合、強化学習に対応。</p><div class="tags"><span>SLAM</span><span>Navigation</span><span>RL</span></div></div></article>
-<article class="product"><div class="product-visual real"><img src="https://oss-global-cdn.unitree.com/static/04e1a2bf8613432d9cad774da006cd85_564x400.png" alt="Robot Gripper" width="564" height="400" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='assets/image-fallback.svg'"></div><div class="product-body"><p class="kicker">HAND / GRIPPER</p><h2>ロボットハンド・グリッパー</h2><p>対象物、把持力、位置精度、触覚、制御方式に合わせて選定。</p><div class="tags"><span>Gripper</span><span>Dexterous Hand</span><span>Force</span></div></div></article>
-<article class="product"><div class="product-visual real"><img src="https://oss-global-cdn.unitree.com/static/51fb5ef9578d41e2b3c79092b573890c_564x399.png" alt="Robot Arm Component" width="564" height="399" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='assets/image-fallback.svg'"></div><div class="product-body"><p class="kicker">ROBOT ARM COMPONENT</p><h2>研究用アーム・周辺機器</h2><p>力制御、精密操作、双腕、教育、実験室自動化に合わせて構成。</p><div class="tags"><span>ROS</span><span>Python</span><span>Force Control</span></div></div></article>
-<article class="product"><div class="product-visual real"><img src="https://oss-global-cdn.unitree.com/static/c3e11498606741c1bd8f5d06bfb8065c_564x399.png" alt="Robot Sensors and Components" width="564" height="399" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='assets/image-fallback.svg'"></div><div class="product-body"><p class="kicker">SENSOR / COMPONENT</p><h2>センサー・周辺機器</h2><p>LiDAR、RGBD、オンボード計算機、通信、エンドエフェクタを構成。</p><div class="tags"><span>LiDAR</span><span>RGBD</span><span>Edge AI</span></div></div></article>
-</div><div class="center-cta"><a class="btn primary" href="contact.html">用途から候補を相談する</a></div><p class="image-note">製品画像・商標は各メーカーに帰属します。仕様・価格・納期は構成およびメーカー更新により変わります。</p></section>
+<article class="product"><div class="product-visual real"><img src="assets/agibot-g2.svg" alt="AgiBot G2" width="900" height="560" loading="eager" decoding="async"></div><div class="product-body"><p class="kicker">MOBILE HUMANOID</p><h2>AgiBot G2</h2><p>移動・認識・把持・対話を統合した移動操作プラットフォーム。</p><div class="tags"><span>Manipulation</span><span>VLA</span><span>データ収集</span></div></div></article>
+<article class="product"><div class="product-visual real"><img src="assets/unitree-g1d.svg" alt="Unitree G1-D" width="900" height="560" loading="lazy" decoding="async"></div><div class="product-body"><p class="kicker">DATA COLLECTION PLATFORM</p><h2>Unitree G1-D</h2><p>上半身操作、昇降機構、移動ベースを組み合わせた研究開発プラットフォーム。</p><div class="tags"><span>模倣学習</span><span>遠隔操作</span><span>双腕</span></div></div></article>
+<article class="product"><div class="product-visual real"><img src="assets/unitree-go2.svg" alt="Unitree Go2" width="900" height="560" loading="lazy" decoding="async"></div><div class="product-body"><p class="kicker">QUADRUPED</p><h2>Unitree Go2 / 四足ロボット</h2><p>SLAM、自律移動、屋外研究、センサー統合、強化学習に対応。</p><div class="tags"><span>SLAM</span><span>Navigation</span><span>RL</span></div></div></article>
+<article class="product"><div class="product-visual real"><img src="assets/robot-hand.svg" alt="Robot Hand and Gripper" width="900" height="560" loading="lazy" decoding="async"></div><div class="product-body"><p class="kicker">HAND / GRIPPER</p><h2>ロボットハンド・グリッパー</h2><p>対象物、把持力、位置精度、触覚、制御方式に合わせて選定。</p><div class="tags"><span>Gripper</span><span>Dexterous Hand</span><span>Force</span></div></div></article>
+<article class="product"><div class="product-visual real"><img src="assets/robot-arm.svg" alt="Research Robot Arm" width="900" height="560" loading="lazy" decoding="async"></div><div class="product-body"><p class="kicker">ROBOT ARM</p><h2>研究用ロボットアーム</h2><p>力制御、精密操作、双腕、教育、実験室自動化に合わせて構成。</p><div class="tags"><span>ROS</span><span>Python</span><span>Force Control</span></div></div></article>
+<article class="product"><div class="product-visual real"><img src="assets/robot-sensors.svg" alt="Robot Sensors and Edge AI" width="900" height="560" loading="lazy" decoding="async"></div><div class="product-body"><p class="kicker">SENSOR / COMPONENT</p><h2>センサー・周辺機器</h2><p>LiDAR、RGBD、オンボード計算機、通信、エンドエフェクタを構成。</p><div class="tags"><span>LiDAR</span><span>RGBD</span><span>Edge AI</span></div></div></article>
+</div><div class="center-cta"><a class="btn primary" href="contact.html">用途から候補を相談する</a></div><p class="image-note">掲載画像は構成イメージです。正式仕様・価格・納期は製品構成およびメーカー更新により変わります。</p></section>
 </main>
 <footer><div><strong>AirAdmin8 Robotics</strong><p>Physical AIを、研究から社会実装へ。</p></div><div><a href="index.html">Home</a><a href="physical-ai.html">Physical AI</a><a href="contact.html">Contact</a></div></footer>
 <script src="app.js"></script>
