@@ -1,7 +1,7 @@
 /*
  * AirAdmin8 Robotics 計測・共通拡張基盤
  *
- * GA4、Google Tag Manager、ブランド表示、進行中事例への導線を
+ * GA4、Google Tag Manager、ブランド表示、進行中事例への導線、SEO基盤を
  * 全ページへ共通適用します。ページ側では app.js から読み込みます。
  */
 (() => {
@@ -127,6 +127,18 @@
   };
 
   /**
+   * Canonical、OGP、構造化データ、日本語表現の統一基盤を読み込みます。
+   */
+  const loadSeoFoundation = () => {
+    if (document.querySelector('script[src="seo-foundation.js"]')) return;
+
+    const script = document.createElement('script');
+    script.src = 'seo-foundation.js';
+    script.defer = true;
+    document.head.appendChild(script);
+  };
+
+  /**
    * ホームに進行中の大学支援事例を表示します。
    * 大学ロゴは使用せず、案件の事実と進捗を文字で明示します。
    */
@@ -181,6 +193,7 @@
   loadGoogleAnalytics();
   bindLinkTracking();
   applyBrandAssets();
+  loadSeoFoundation();
   addCaseProofToHome();
 
   window.AirAdmin8Analytics = Object.freeze({ trackEvent });
