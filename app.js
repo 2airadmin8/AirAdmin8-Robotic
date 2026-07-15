@@ -20,6 +20,7 @@
     'scripts/navigation.js',
     'scripts/page-enhancements.js',
     'scripts/resources-search.js',
+    'scripts/resources-seo.js',
     'scripts/contact-form.js'
   ];
 
