@@ -1,0 +1,8 @@
+# WADAX SMTPの秘密情報
+contact-config.php
+
+# ローカル開発用ファイル
+.env
+.env.*
+.DS_Store
+Thumbs.db
