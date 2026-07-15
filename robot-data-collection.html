@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ロボットのデータ収集方法｜模倣学習・VLA・遠隔操作</title>
+  <meta name="description" content="模倣学習やVLA向けのロボットデータ収集方法を、遠隔操作、VR、モーションキャプチャ、実機再生、データ形式、評価項目で整理します。">
+  <link rel="canonical" href="https://robotics.air-admin8.co.jp/robot-data-collection.html">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header><a class="logo" href="index.html"><span>A8</span>AirAdmin8 Robotics</a><button class="menu" aria-label="メニューを開く" aria-expanded="false">☰</button><nav></nav></header>
+<main>
+  <section class="subhero"><p class="kicker">ROBOT DATA COLLECTION</p><h1>ロボットのデータ収集方法。</h1><p class="lead">模倣学習やVLAでは、収集装置より先に、何を観測し、何を行動として残し、どの精度で再現したいかを決める必要があります。</p></section>
+  <section class="section"><div class="section-head"><p class="kicker">COLLECTION METHODS</p><h2>代表的な4つの方法。</h2></div><div class="cards">
+    <article><h3>直接遠隔操作</h3><p>ジョイスティック、マスターアーム、専用操作器で実機を動かします。</p></article>
+    <article><h3>VR・空間入力</h3><p>頭部・手・姿勢の入力をロボット動作へ変換します。</p></article>
+    <article><h3>モーションキャプチャ</h3><p>人の身体動作を取得し、ロボットの関節・手先へ対応付けます。</p></article>
+    <article><h3>シミュレーション再生</h3><p>MuJoCo等で軌跡を生成・評価し、実機へ移行します。</p></article>
+  </div></section>
+  <section class="section soft"><div class="section-head"><p class="kicker">DATA DESIGN</p><h2>収集前に決める項目。</h2></div><div class="solution-list">
+    <article><div><span>01</span><h3>観測</h3></div><p>RGB、深度、関節角、力、触覚、音声、環境状態。</p><em>必要なセンサーを定義</em></article>
+    <article><div><span>02</span><h3>行動</h3></div><p>関節指令、手先姿勢、速度、力、グリッパ開閉。</p><em>学習単位を定義</em></article>
+    <article><div><span>03</span><h3>同期</h3></div><p>カメラ、関節、力覚、操作入力の時刻を合わせます。</p><em>ずれを最小化</em></article>
+    <article><div><span>04</span><h3>評価</h3></div><p>成功率、再現性、ノイズ、欠損、操作負荷、収集速度。</p><em>使えるデータか判断</em></article>
+  </div></section>
+  <section class="section"><div class="section-head"><p class="kicker">PLATFORM OPTIONS</p><h2>用途に合う収集プラットフォーム。</h2></div><div class="product-strip">
+    <article><img src="assets/unitree-g1d.svg" alt="Unitree G1-D"><div class="body"><h3>Unitree G1-D</h3><p>双腕操作、VLA、模倣学習、遠隔操作、データ収集向け。</p><a href="product-unitree-g1d.html">詳細を見る →</a></div></article>
+    <article><img src="assets/agibot-link-x1.svg" alt="AGIBOT Link X1"><div class="body"><h3>AGIBOT Link X1</h3><p>ハード構造、図面、学習・推論コードを確認しながら開発。</p><a href="product-agibot-link-x1.html">詳細を見る →</a></div></article>
+    <article><img src="assets/agibot-g2.svg" alt="AGIBOT G2"><div class="body"><h3>AGIBOT G2</h3><p>移動・操作・対人環境を含むデータ収集や実機評価の候補。</p><a href="product-agibot-g2.html">詳細を見る →</a></div></article>
+  </div></section>
+  <section class="section navy"><div class="section-head"><p class="kicker light">NEXT STEP</p><h2>収集方法と機材構成を整理する。</h2><p class="lead" style="color:#d6e5eb">タスク、必要データ量、操作方法、センサー、学習環境、評価方法から構成を比較します。</p></div><div class="center-cta"><a class="btn white" href="contact.html">データ収集構成を相談する</a></div></section>
+</main>
+<footer><div><strong>AirAdmin8 Robotics</strong><p>AIロボットで、人と社会の未来を支える。</p></div><div></div></footer>
+<script src="app.js"></script>
+</body>
+</html>
