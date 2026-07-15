@@ -41,8 +41,13 @@
       'guide-vla-data-collection.html',
       'guide-robot-poc.html'
     ]),
-    support: new Set([
+    services: new Set([
+      'service-packages.html',
+      'package-university-research.html',
+      'package-inspection-poc.html',
+      'package-vla-data.html',
       'support.html',
+      'safety-support.html',
       'case-university-selection.html',
       'case-keio-selection.html'
     ])
@@ -53,7 +58,7 @@
     ['products-v3.html', '製品を比較する', pageGroups.products.has(currentPage)],
     ['manufacturers.html', 'メーカー・資料', pageGroups.manufacturers.has(currentPage)],
     ['knowledge-hub.html', '判断ハブ', pageGroups.knowledge.has(currentPage)],
-    ['support.html', '導入事例', pageGroups.support.has(currentPage)],
+    ['service-packages.html', '支援・事例', pageGroups.services.has(currentPage)],
     ['contact.html', '相談する', currentPage === 'contact.html', true]
   ];
 
@@ -64,8 +69,9 @@
     ['manufacturers.html', 'メーカー'],
     ['resources.html', '開発資料'],
     ['knowledge-hub.html', '判断ハブ'],
+    ['service-packages.html', '支援パッケージ'],
     ['case-university-selection.html', '支援事例'],
-    ['support.html', '導入・サポート'],
+    ['safety-support.html', '安全・保守'],
     ['contact.html', 'お問い合わせ']
   ];
 
