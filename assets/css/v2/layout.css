@@ -1,0 +1,95 @@
+/* ============================================================
+ * AirAdmin8 Robotics V2 / Layout
+ * ------------------------------------------------------------
+ * Header、Main、Section、Footerなど、ページ全体の骨格を定義します。
+ * ============================================================ */
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  min-height: var(--a8-header-height);
+  padding: 0 max(5vw, 24px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: rgba(255, 255, 255, 0.96);
+  border-bottom: 1px solid var(--a8-color-border);
+  backdrop-filter: blur(14px);
+}
+
+main {
+  min-height: 60vh;
+}
+
+.section,
+.subhero,
+.hero,
+.hero-v6 {
+  padding-left: max(7vw, 24px);
+  padding-right: max(7vw, 24px);
+}
+
+.section {
+  padding-top: var(--a8-space-9);
+  padding-bottom: var(--a8-space-9);
+}
+
+.section > *,
+.subhero > *,
+.hero > *,
+.hero-v6 > * {
+  max-width: var(--a8-content-width);
+}
+
+.section-head {
+  max-width: 900px;
+  margin-bottom: var(--a8-space-7);
+}
+
+.section-head h2,
+.subhero h1,
+.hero h1,
+.hero-v6 h1 {
+  margin: 0;
+  color: inherit;
+  letter-spacing: -0.04em;
+}
+
+.soft {
+  background: var(--a8-color-surface-soft);
+}
+
+.navy,
+.dark {
+  color: #ffffff;
+  background: var(--a8-color-navy);
+}
+
+.navy .lead,
+.dark .lead,
+.navy p,
+.dark p {
+  color: #d6e5eb;
+}
+
+footer {
+  padding: 48px max(7vw, 24px);
+  display: grid;
+  grid-template-columns: minmax(240px, 0.8fr) minmax(0, 1.2fr);
+  gap: 48px;
+  align-items: start;
+  color: #d6e5eb;
+  background: #061923;
+}
+
+footer > div:last-child {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(110px, 1fr));
+  gap: 14px 24px;
+}
+
+footer a {
+  line-height: 1.5;
+  word-break: keep-all;
+}
