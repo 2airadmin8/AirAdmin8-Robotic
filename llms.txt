@@ -1,0 +1,39 @@
+# AirAdmin8 Robotics
+
+AirAdmin8 Roboticsは、AIロボットの比較・選定・見積・大学購買・PoC・導入支援を行う株式会社AirAdmin8の専門サイトです。
+
+## Main purpose
+
+- 人型、移動式ヒューマノイド、四足、ロボットアームを用途から比較する
+- メーカーごとの製品、SDK、ROS、GitHub、Hugging Face、公式資料を整理する
+- 大学・研究室向けに正式型番、二社見積、納期、保証、検収条件を整理する
+- VLA、模倣学習、データ収集、PoCの構成と判断材料を提供する
+
+## Primary pages
+
+- Home: https://robotics.air-admin8.co.jp/
+- Solutions: https://robotics.air-admin8.co.jp/solutions.html
+- Product comparison: https://robotics.air-admin8.co.jp/products-v3.html
+- Manufacturers and resources: https://robotics.air-admin8.co.jp/manufacturers.html
+- Developer resources: https://robotics.air-admin8.co.jp/resources.html
+- University robot purchase guide: https://robotics.air-admin8.co.jp/university-robot-purchase.html
+- Humanoid comparison guide: https://robotics.air-admin8.co.jp/humanoid-robot-comparison.html
+- Robot quotation guide: https://robotics.air-admin8.co.jp/robot-quotation.html
+- Robot PoC guide: https://robotics.air-admin8.co.jp/robot-poc-cost.html
+- Robot data collection guide: https://robotics.air-admin8.co.jp/robot-data-collection.html
+- Keio University support case: https://robotics.air-admin8.co.jp/case-keio-selection.html
+- Contact: https://robotics.air-admin8.co.jp/contact.html
+
+## Editorial policy
+
+- メーカー公式情報とAirAdmin8の判断を区別します。
+- 未確認事項は未確認と記載します。
+- 価格、納期、仕様は変更されるため、最終判断では正式見積とメーカー確認を優先します。
+- 大学ロゴ、個人名、未承認の推薦コメントは許可なく掲載しません。
+
+## Contact
+
+- Company: 株式会社AirAdmin8
+- Service: AirAdmin8 Robotics
+- Email: airobot@robotics.air-admin8.co.jp
+- Website: https://robotics.air-admin8.co.jp/
