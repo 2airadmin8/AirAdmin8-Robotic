@@ -1,0 +1,21 @@
+[
+  {
+    "id": "keio-ai-robot-selection",
+    "title": "慶應義塾大学研究室向けAIロボット選定・購買支援",
+    "status": "in_progress",
+    "statusLabel": "進行中",
+    "customerType": "大学研究室",
+    "targetProduct": "Unitree G1-D Flagship",
+    "supportScope": [
+      "研究要件整理",
+      "製品・構成比較",
+      "正式見積",
+      "二社見積対応",
+      "納期・保証確認",
+      "大学購買条件整理"
+    ],
+    "currentStage": "大学事務部門への確認・購買手続き",
+    "publicPage": "case-keio-selection.html",
+    "updatedAt": "2026-07-15"
+  }
+]
