@@ -1,1 +1,162 @@
-<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>大学研究室向けAIロボット選定・購買支援｜AirAdmin8 Robotics</title><meta name="description" content="大学研究室向けのAIロボット選定、複数候補比較、見積、型番整理、購買対応の支援事例。"><link rel="stylesheet" href="styles.css"><style>.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.box{padding:26px;border:1px solid var(--line);border-radius:24px;background:#fff}.box p{color:var(--muted)}.status{display:inline-block;padding:6px 10px;border-radius:999px;background:#eaf8fc;color:#17667f;font-weight:900}.timeline{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}.timeline div{padding:22px;border:1px solid var(--line);border-radius:20px;background:#fff}.timeline b{display:block;color:var(--blue)}@media(max-width:900px){.grid{grid-template-columns:1fr}.timeline{grid-template-columns:1fr 1fr}}@media(max-width:640px){.timeline{grid-template-columns:1fr}}</style></head><body><header><a class="logo" href="index.html"><span>A8</span>AirAdmin8 Robotics</a><button class="menu" aria-label="メニューを開く" aria-expanded="false">☰</button><nav></nav></header><main><section class="subhero"><p class="kicker">CASE / UNIVERSITY PROCUREMENT</p><span class="status">選定・購買支援</span><h1>大学研究室向け<br>AIロボット選定・購買支援。</h1><p class="lead">研究テーマ、必要機能、大学購買条件を整理し、複数候補の比較、見積、型番・納期・保証確認までを支援した事例です。</p></section><section class="section"><div class="section-head"><p class="kicker">BACKGROUND</p><h2>研究用途だけでなく、購買成立まで設計する。</h2></div><div class="grid"><article class="box"><h3>研究課題</h3><p>双腕操作、データ収集、模倣学習、VLA研究に適した機体構成の検討。</p></article><article class="box"><h3>選定課題</h3><p>複数メーカー、ハンド構成、SDK、研究拡張性、価格、納期の比較。</p></article><article class="box"><h3>購買課題</h3><p>正式型番、メーカー名、数量、税込総額、納期、保証、大学指定書類の整理。</p></article></div></section><section class="section soft"><div class="section-head"><p class="kicker">AIRADMIN8 ROLE</p><h2>AirAdmin8が行ったこと。</h2></div><div class="timeline"><div><b>01</b><span>研究用途確認</span><small>対象タスク、精度、ハンド、SDK</small></div><div><b>02</b><span>候補比較</span><small>複数メーカー・構成の差分整理</small></div><div><b>03</b><span>仕様確認</span><small>型番、付属品、無線、電池、保証</small></div><div><b>04</b><span>見積・購買</span><small>大学向け正式見積と必要情報</small></div><div><b>05</b><span>導入条件整理</span><small>納期、検収、初期設定、支援範囲</small></div></div></section><section class="section"><div class="section-head"><p class="kicker">VALUE</p><h2>製品を紹介するだけでは、購買は進まない。</h2></div><div class="grid"><article class="box"><h3>比較の透明性</h3><p>強みだけでなく、弱点、未確認事項、代替案を分けて提示。</p></article><article class="box"><h3>購買の実務性</h3><p>大学内部で必要となる型番、納期、保証、正式見積を整備。</p></article><article class="box"><h3>導入後を見据える</h3><p>SDK、初期設定、検収、二次開発の責任範囲を事前に整理。</p></article></div><p class="lead small">本ページは公開可能な範囲に限定した支援事例です。個別機関名、契約状況、未確定条件は記載していません。</p><div class="center-cta"><a class="btn primary" href="contact.html">大学購買・選定を相談する</a></div></section></main><footer><div><strong>AirAdmin8 Robotics</strong><p>AIロボットで、人と社会の未来を支える。</p></div><div></div></footer><script src="app.js"></script></body></html>
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>大学研究室向けAIロボット選定・購買支援｜AirAdmin8 Robotics</title>
+  <meta name="description" content="大学研究室向けのAIロボット選定、複数候補比較、見積、型番整理、購買対応の支援事例を紹介します。">
+  <link rel="canonical" href="https://2airadmin8.github.io/AirAdmin8-Robotic/case-university-selection.html">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .case-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .case-box {
+      padding: 26px;
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      background: #fff;
+      box-shadow: 0 12px 30px rgba(12, 52, 72, .05);
+    }
+
+    .case-box p {
+      color: var(--muted);
+    }
+
+    .case-status {
+      display: inline-block;
+      padding: 7px 12px;
+      border-radius: 999px;
+      background: #fff6dd;
+      color: #7a5500;
+      font-weight: 900;
+    }
+
+    .support-flow {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .support-flow > div {
+      padding: 22px;
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      background: #fff;
+    }
+
+    .support-flow b {
+      display: block;
+      color: var(--blue);
+    }
+
+    .support-flow span,
+    .support-flow small {
+      display: block;
+    }
+
+    .support-flow span {
+      margin: 8px 0;
+      font-weight: 900;
+    }
+
+    @media (max-width: 900px) {
+      .case-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .support-flow {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .support-flow {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <a class="logo" href="index.html"><span>A8</span>AirAdmin8 Robotics</a>
+    <button class="menu" aria-label="メニューを開く" aria-expanded="false">☰</button>
+    <nav></nav>
+  </header>
+
+  <main>
+    <section class="subhero">
+      <p class="kicker">CASE / UNIVERSITY PROCUREMENT</p>
+      <h1>大学研究室向け<br>AIロボット選定・購買支援。</h1>
+      <p class="lead">研究テーマ、必要機能、大学購買条件を整理し、複数候補の比較、見積、型番・納期・保証確認まで支援します。</p>
+    </section>
+
+    <section class="section">
+      <div class="section-head">
+        <p class="kicker">REAL CASE</p>
+        <h2>公開可能な範囲で、進行状況まで明示。</h2>
+      </div>
+
+      <div class="case-grid">
+        <article class="case-box">
+          <span class="case-status">進行中</span>
+          <h3>慶應義塾大学研究室向け支援</h3>
+          <p>Unitree G1-Dの構成確認、二社見積、正式型番、納期、保証、SDK、大学購買条件を整理しています。</p>
+          <a class="btn ghost" href="case-keio-selection.html">事例の詳細を見る</a>
+        </article>
+
+        <article class="case-box">
+          <h3>製品比較</h3>
+          <p>研究テーマ、機体形態、ハンド、SDK、拡張性、価格、納期を同じ基準で比較します。</p>
+        </article>
+
+        <article class="case-box">
+          <h3>購買実務</h3>
+          <p>正式型番、メーカー名、数量、税込総額、納期、保証、大学指定書類を整理します。</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section soft">
+      <div class="section-head">
+        <p class="kicker">AIRADMIN8 ROLE</p>
+        <h2>比較から大学購買までの支援範囲。</h2>
+      </div>
+
+      <div class="support-flow">
+        <div><b>01</b><span>研究用途確認</span><small>対象タスク、精度、ハンド、SDK</small></div>
+        <div><b>02</b><span>候補比較</span><small>複数メーカー・構成の差分整理</small></div>
+        <div><b>03</b><span>仕様確認</span><small>型番、付属品、安全、保証</small></div>
+        <div><b>04</b><span>見積・購買</span><small>大学向け正式見積と必要情報</small></div>
+        <div><b>05</b><span>導入条件整理</span><small>納期、検収、初期設定、支援範囲</small></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-head">
+        <p class="kicker">VALUE</p>
+        <h2>製品を紹介するだけでは、大学購買は進まない。</h2>
+      </div>
+
+      <div class="case-grid">
+        <article class="case-box"><h3>比較の透明性</h3><p>強みだけでなく、弱点、未確認事項、代替案を分けて提示します。</p></article>
+        <article class="case-box"><h3>購買の実務性</h3><p>大学内部で必要な型番、納期、保証、正式見積を整備します。</p></article>
+        <article class="case-box"><h3>導入後を見据える</h3><p>SDK、初期設定、検収、二次開発の責任範囲を事前に整理します。</p></article>
+      </div>
+
+      <div class="center-cta">
+        <a class="btn primary" href="contact.html">大学購買・選定を相談する</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div><strong>AirAdmin8 Robotics</strong><p>AIロボットで、人と社会の未来を支える。</p></div>
+    <div></div>
+  </footer>
+  <script src="app.js"></script>
+</body>
+</html>
