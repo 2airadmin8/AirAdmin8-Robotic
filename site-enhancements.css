@@ -1,0 +1,183 @@
+/*
+ * AirAdmin8 Robotics 追加スタイル
+ *
+ * ブランド表示、フッター、支援事例カードを共通化します。
+ * 既存CSSへの影響を限定するため、詳細度の高いセレクタで上書きします。
+ */
+
+/* ヘッダー：ロゴマークと社名を1つのブランド表示として整えます。 */
+header .logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 250px;
+  overflow: visible;
+}
+
+header .logo .brand-mark {
+  display: inline-grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  padding: 7px;
+  flex: 0 0 42px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #00a9df 0%, #087493 100%);
+  color: #fff;
+}
+
+header .logo .brand-mark svg {
+  width: 100%;
+  height: 100%;
+}
+
+/* styles.css の「.logo span」指定が社名まで四角化するのを解除します。 */
+header .logo .brand-name {
+  display: inline;
+  width: auto;
+  height: auto;
+  padding: 0;
+  border-radius: 0;
+  background: transparent;
+  color: var(--ink);
+  font-size: 1.05rem;
+  font-weight: 900;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+
+/* フッター：短い単語単位で折れず、読みやすい列構成にします。 */
+footer {
+  align-items: flex-start;
+}
+
+footer > div:first-child {
+  min-width: 280px;
+}
+
+footer div:last-child {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(100px, 1fr));
+  gap: 14px 24px;
+  width: min(780px, 100%);
+  align-items: start;
+}
+
+footer div:last-child a {
+  display: block;
+  line-height: 1.5;
+  white-space: normal;
+  word-break: keep-all;
+  overflow-wrap: normal;
+}
+
+/* ホーム：進行中事例を、誤認を招かない文字情報で表示します。 */
+.case-proof-section {
+  background: #fff;
+}
+
+.case-proof-card {
+  display: grid;
+  grid-template-columns: minmax(220px, .75fr) minmax(0, 1.25fr);
+  gap: 32px;
+  padding: 34px;
+  border: 1px solid var(--line);
+  border-radius: 28px;
+  background: linear-gradient(135deg, #f7fcfe 0%, #ffffff 70%);
+  box-shadow: 0 18px 42px rgba(12, 52, 72, .07);
+}
+
+.case-proof-label {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 22px;
+}
+
+.case-proof-school {
+  margin: 0;
+  font-size: clamp(1.7rem, 3vw, 2.7rem);
+  line-height: 1.25;
+  letter-spacing: -.03em;
+}
+
+.case-proof-status {
+  display: inline-flex;
+  width: fit-content;
+  padding: 8px 13px;
+  border: 1px solid #f0d486;
+  border-radius: 999px;
+  background: #fff7df;
+  color: #725100;
+  font-size: .84rem;
+  font-weight: 900;
+}
+
+.case-proof-steps {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 10px;
+  margin: 22px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.case-proof-steps li {
+  padding: 14px 12px;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: #fff;
+  text-align: center;
+  font-size: .88rem;
+  font-weight: 800;
+}
+
+.case-proof-steps li.is-current {
+  border-color: #6fcce9;
+  background: #eaf8fc;
+  color: #17667f;
+}
+
+.case-proof-note {
+  margin-top: 18px;
+  color: var(--muted);
+  font-size: .88rem;
+}
+
+@media (max-width: 1050px) {
+  header .logo {
+    min-width: auto;
+  }
+
+  footer div:last-child {
+    grid-template-columns: repeat(3, minmax(110px, 1fr));
+  }
+
+  .case-proof-steps {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 700px) {
+  header .logo .brand-name {
+    font-size: .95rem;
+  }
+
+  footer > div:first-child {
+    min-width: 0;
+  }
+
+  footer div:last-child {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px 18px;
+  }
+
+  .case-proof-card {
+    grid-template-columns: 1fr;
+    padding: 24px;
+  }
+
+  .case-proof-steps {
+    grid-template-columns: 1fr 1fr;
+  }
+}
