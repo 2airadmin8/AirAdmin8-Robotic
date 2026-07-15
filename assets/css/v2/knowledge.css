@@ -1,0 +1,107 @@
+/* ============================================================
+ * AirAdmin8 Robotics V2 / Knowledge & Decision UI
+ * ------------------------------------------------------------
+ * 判断型ナレッジ、製品状態、文脈別CTAの共通表示を定義します。
+ * ============================================================ */
+
+.knowledge-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.knowledge-card {
+  min-height: 190px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  color: var(--a8-color-ink);
+  background: #ffffff;
+  border: 1px solid var(--a8-color-border);
+  border-radius: var(--a8-radius-lg);
+  box-shadow: var(--a8-shadow-sm);
+}
+
+.knowledge-card span {
+  color: var(--a8-color-primary);
+  font-size: 0.8rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+}
+
+.knowledge-card strong {
+  font-size: 1.2rem;
+  line-height: 1.45;
+}
+
+.knowledge-card small {
+  margin-top: auto;
+  color: var(--a8-color-muted);
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+.decision-steps {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.decision-steps article,
+.product-status-notice,
+.contextual-cta {
+  color: var(--a8-color-ink);
+  background: #ffffff;
+  border: 1px solid var(--a8-color-border);
+  border-radius: var(--a8-radius-lg);
+  box-shadow: var(--a8-shadow-sm);
+}
+
+.decision-steps article {
+  padding: 24px;
+}
+
+.decision-steps b {
+  color: var(--a8-color-primary);
+  font-size: 1.4rem;
+}
+
+.product-status-notice,
+.contextual-cta {
+  margin-top: 24px;
+}
+
+.is-discontinued {
+  opacity: 0.72;
+}
+
+.is-discontinued::after {
+  content: "販売終了";
+  display: inline-flex;
+  margin-top: 10px;
+  padding: 4px 10px;
+  color: #ffffff;
+  background: #6c7a80;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 800;
+}
+
+@media (max-width: 900px) {
+  .knowledge-grid,
+  .decision-steps {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .knowledge-grid,
+  .decision-steps {
+    grid-template-columns: 1fr;
+  }
+
+  .knowledge-card {
+    min-height: auto;
+  }
+}
