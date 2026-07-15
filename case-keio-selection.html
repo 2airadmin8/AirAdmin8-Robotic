@@ -4,9 +4,13 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>慶應義塾大学向けAIロボット選定・購買支援｜AirAdmin8 Robotics</title>
-  <meta name="description" content="慶應義塾大学の研究室向けに、Unitree G1-Dの構成確認、複数見積、大学購買条件、納期・保証・SDK確認を支援している進行中の事例です。">
-  <link rel="canonical" href="https://2airadmin8.github.io/AirAdmin8-Robotic/case-keio-selection.html">
+  <meta
+    name="description"
+    content="慶應義塾大学の研究室向けに、Unitree G1-Dの構成確認、複数見積、大学購買条件、納期・保証・SDK確認を支援している進行中の事例です。"
+  >
+  <link rel="canonical" href="https://robotics.air-admin8.co.jp/case-keio-selection.html">
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="site-enhancements.css">
   <style>
     .case-hero {
       padding: 92px 7vw 72px;
@@ -18,21 +22,40 @@
       margin: 0 auto;
     }
 
-    .status-badge {
+    .case-eyebrow {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+      margin-bottom: 24px;
+    }
+
+    .status-badge,
+    .case-label {
       display: inline-flex;
       align-items: center;
-      gap: 8px;
+      width: fit-content;
       padding: 9px 14px;
       border-radius: 999px;
+      font-size: .86rem;
+      font-weight: 900;
+    }
+
+    .status-badge {
+      border: 1px solid #f1d98c;
       background: #fff6dd;
       color: #7a5500;
-      font-weight: 800;
-      border: 1px solid #f1d98c;
+    }
+
+    .case-label {
+      border: 1px solid #bfe3ef;
+      background: #effaff;
+      color: #17667f;
     }
 
     .case-title {
       max-width: 920px;
-      margin: 22px 0 18px;
+      margin: 0 0 18px;
       font-size: clamp(2.2rem, 5vw, 4.6rem);
       line-height: 1.08;
       letter-spacing: -.04em;
@@ -46,7 +69,8 @@
     }
 
     .case-card,
-    .timeline-item {
+    .timeline-item,
+    .proof-card {
       padding: 28px;
       border: 1px solid var(--line);
       border-radius: 24px;
@@ -55,7 +79,8 @@
     }
 
     .case-card h3,
-    .timeline-item h3 {
+    .timeline-item h3,
+    .proof-card h3 {
       margin-top: 0;
     }
 
@@ -68,11 +93,38 @@
 
     .timeline {
       display: grid;
-      gap: 16px;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .timeline-item {
+      position: relative;
+      padding: 22px;
     }
 
     .timeline-item b {
       color: var(--blue);
+    }
+
+    .timeline-item.is-current {
+      border-color: #6fcce9;
+      background: #eefaff;
+    }
+
+    .timeline-item.is-pending {
+      background: #f7f9fa;
+      color: #718088;
+    }
+
+    .proof-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .proof-card p {
+      margin-bottom: 0;
+      color: var(--muted);
     }
 
     .notice {
@@ -82,8 +134,19 @@
       color: var(--muted);
     }
 
-    @media (max-width: 840px) {
-      .case-grid {
+    @media (max-width: 920px) {
+      .case-grid,
+      .proof-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .timeline {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 620px) {
+      .timeline {
         grid-template-columns: 1fr;
       }
     }
@@ -99,10 +162,16 @@
   <main>
     <section class="case-hero">
       <div class="case-wrap">
-        <span class="status-badge">● 進行中｜大学内の購買手続き確認中</span>
-        <p class="kicker" style="margin-top:24px">UNIVERSITY PROCUREMENT CASE</p>
+        <div class="case-eyebrow">
+          <span class="status-badge">進行中｜2026年7月</span>
+          <span class="case-label">大学研究室向け選定・購買支援</span>
+        </div>
+        <p class="kicker">CASE / UNIVERSITY PROCUREMENT</p>
         <h1 class="case-title">慶應義塾大学研究室向け<br>AIロボット選定・購買支援</h1>
-        <p class="lead">研究用途、開発環境、大学購買条件を整理し、Unitree G1-Dの構成確認、比較見積、納期・保証・SDK・付属品の確認まで支援しています。</p>
+        <p class="lead">
+          研究用途、開発環境、大学購買条件を整理し、Unitree G1-Dの構成確認、
+          比較見積、納期・保証・SDK・付属品の確認まで支援しています。
+        </p>
       </div>
     </section>
 
@@ -111,7 +180,11 @@
         <article class="case-card">
           <p class="kicker">BACKGROUND</p>
           <h2>研究用途と購買条件を、同時に整理。</h2>
-          <p>大学研究室でロボットを導入する場合、性能だけでなく、正式型番、メーカー名、付属品、納期、保証、二社見積、設置条件など、大学内の購買要件を揃える必要があります。</p>
+          <p>
+            大学研究室でロボットを導入する場合、性能だけでなく、正式型番、
+            メーカー名、付属品、納期、保証、二社見積、設置条件など、
+            大学内の購買要件を揃える必要があります。
+          </p>
           <ul class="case-list">
             <li>研究用途に必要な構成とオプションの確認</li>
             <li>正式見積に必要な製品名・型番・数量の整理</li>
@@ -142,17 +215,65 @@
         <div class="section-head">
           <p class="kicker">CURRENT PROGRESS</p>
           <h2>現在の進捗を、完了扱いにせず明示。</h2>
+          <p class="lead">相談から納品までを5段階で管理し、現在地と次の確認事項を共有します。</p>
         </div>
 
         <div class="timeline">
-          <article class="timeline-item"><b>01</b><h3>研究要件の確認</h3><p>研究用途、必要な操作構成、SDK・開発条件を整理。</p></article>
-          <article class="timeline-item"><b>02</b><h3>候補・構成比較</h3><p>本体、ハンド、付属品、開発資料を比較し、正式見積構成を確定。</p></article>
-          <article class="timeline-item"><b>03</b><h3>見積・購買条件整理</h3><p>二社見積、納期、納品条件、検収、保証の記載条件を確認。</p></article>
-          <article class="timeline-item"><b>04</b><h3>大学内手続き</h3><p>現在、大学事務部門への確認と購買手続きが進行中です。</p></article>
+          <article class="timeline-item">
+            <b>01 完了</b>
+            <h3>研究要件の確認</h3>
+            <p>研究用途、必要な操作構成、SDK・開発条件を整理。</p>
+          </article>
+          <article class="timeline-item">
+            <b>02 完了</b>
+            <h3>候補・構成比較</h3>
+            <p>本体、ハンド、付属品、開発資料を比較し、見積構成を整理。</p>
+          </article>
+          <article class="timeline-item">
+            <b>03 完了</b>
+            <h3>正式見積</h3>
+            <p>二社見積、納期、納品条件、検収、保証の記載条件を確認。</p>
+          </article>
+          <article class="timeline-item is-current">
+            <b>04 現在</b>
+            <h3>大学内手続き</h3>
+            <p>大学事務部門への確認と購買手続きが進行中です。</p>
+          </article>
+          <article class="timeline-item is-pending">
+            <b>05 予定</b>
+            <h3>納品・導入</h3>
+            <p>正式発注後、納期・検収・初期設定条件に沿って進行予定です。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="case-wrap">
+        <div class="section-head">
+          <p class="kicker">REAL EVIDENCE</p>
+          <h2>公開できる事実を、誇張せず提示。</h2>
+        </div>
+
+        <div class="proof-grid">
+          <article class="proof-card">
+            <h3>製品比較</h3>
+            <p>本体、ハンド、SDK、付属品、納期、保証を同じ基準で整理。</p>
+          </article>
+          <article class="proof-card">
+            <h3>正式見積・購買支援</h3>
+            <p>大学指定項目と二社見積条件に合わせ、購買判断に必要な情報を整備。</p>
+          </article>
+          <article class="proof-card">
+            <h3>未確認事項の管理</h3>
+            <p>通信、電池、輸送、検収、初期設定など、確認前の事項を完了扱いにしません。</p>
+          </article>
         </div>
 
         <div class="notice" style="margin-top:28px">
-          本事例は進行中です。納品・導入完了事例ではありません。個人名、連絡画面、具体的な価格、未承認の推薦コメントは公開していません。
+          本事例は進行中です。納品・導入完了事例ではありません。
+          大学ロゴ、個人名、連絡画面、具体的な価格、未承認の推薦コメントは公開していません。
+          大学名は支援先を示す文字情報として掲載し、公式提携・認定を示すものではありません。
         </div>
       </div>
     </section>
@@ -162,7 +283,9 @@
         <div class="section-head">
           <p class="kicker light">FOR UNIVERSITY LABS</p>
           <h2>研究テーマだけでなく、大学購買まで整理します。</h2>
-          <p class="lead" style="color:#d6e5eb">候補製品、SDK、構成、見積、納期、保証、大学内の申請条件をまとめて確認します。</p>
+          <p class="lead" style="color:#d6e5eb">
+            候補製品、SDK、構成、見積、納期、保証、大学内の申請条件をまとめて確認します。
+          </p>
         </div>
         <div class="center-cta">
           <a class="btn white" href="contact.html">研究用途・購買条件を相談する</a>
@@ -172,9 +295,13 @@
   </main>
 
   <footer>
-    <div><strong>AirAdmin8 Robotics</strong><p>AIロボットで、人と社会の未来を支える。</p></div>
+    <div>
+      <strong>AirAdmin8 Robotics</strong>
+      <p>AIロボットで、人と社会の未来を支える。</p>
+    </div>
     <div></div>
   </footer>
+
   <script src="app.js"></script>
 </body>
 </html>
