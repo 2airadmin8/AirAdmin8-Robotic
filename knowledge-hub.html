@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AIロボット判断ハブ｜用途・比較・PoC・大学導入</title>
+  <meta name="description" content="AIロボットを何から調べるべきか迷う方へ。用途、形態、開発方法、PoC、大学購買の順で判断できる実務型ナレッジハブです。">
+  <link rel="canonical" href="https://robotics.air-admin8.co.jp/knowledge-hub.html">
+  <link rel="stylesheet" href="styles.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "AIロボット判断ハブ",
+    "url": "https://robotics.air-admin8.co.jp/knowledge-hub.html",
+    "description": "用途、比較、PoC、大学購買からAIロボット導入を判断する実務型ナレッジハブ",
+    "inLanguage": "ja-JP",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "AirAdmin8 Robotics",
+      "url": "https://robotics.air-admin8.co.jp/"
+    }
+  }
+  </script>
+</head>
+<body>
+  <header>
+    <a class="logo" href="index.html">AirAdmin8 Robotics</a>
+    <button class="menu" type="button" aria-label="メニューを開く" aria-expanded="false">☰</button>
+    <nav></nav>
+  </header>
+
+  <main>
+    <section class="subhero">
+      <p class="kicker">ROBOT DECISION HUB</p>
+      <h1>用語からではなく、<br>判断したいことから探す。</h1>
+      <p class="lead">
+        AIロボットの情報を辞書のように並べるのではなく、
+        「何を実現したいか」「何を比較すべきか」「どう始めるか」の順で整理します。
+      </p>
+      <div class="center-cta">
+        <a class="btn primary" href="#decision-paths">目的から探す</a>
+        <a class="btn ghost" href="contact.html?intent=quick-consultation">15分だけ相談する</a>
+      </div>
+    </section>
+
+    <section class="section" id="decision-paths">
+      <div class="section-head">
+        <p class="kicker">01 / WHAT TO ACHIEVE</p>
+        <h2>まず、実現したい仕事から。</h2>
+        <p class="lead">製品名が決まっていなくても、必要な身体・制御・データ構成を絞り込めます。</p>
+      </div>
+      <div class="knowledge-grid">
+        <a class="knowledge-card" href="solutions.html">
+          <span>搬送・移動</span>
+          <strong>物を運ぶ構成を決める</strong>
+          <small>AMR、四足、移動式人形を比較</small>
+        </a>
+        <a class="knowledge-card" href="solutions.html">
+          <span>巡回・点検</span>
+          <strong>現場環境に合う移動体を選ぶ</strong>
+          <small>床、段差、通信、センサーを確認</small>
+        </a>
+        <a class="knowledge-card" href="task-lab-automation.html">
+          <span>把持・操作</span>
+          <strong>固定アームか人形かを判断する</strong>
+          <small>精度、可搬、作業範囲を比較</small>
+        </a>
+        <a class="knowledge-card" href="guide-vla-data-collection.html">
+          <span>データ収集</span>
+          <strong>模倣学習に必要な構成を作る</strong>
+          <small>テレオペ、カメラ、形式、評価を整理</small>
+        </a>
+        <a class="knowledge-card" href="guide-university-robot-purchase.html">
+          <span>大学・研究</span>
+          <strong>研究テーマから候補を出す</strong>
+          <small>SDK、見積、購買、検収まで確認</small>
+        </a>
+        <a class="knowledge-card" href="task-lab-automation.html">
+          <span>実験室自動化</span>
+          <strong>安定性と拡張性を分けて設計する</strong>
+          <small>固定設備と移動ロボットを使い分け</small>
+        </a>
+      </div>
+    </section>
+
+    <section class="section soft">
+      <div class="section-head">
+        <p class="kicker">02 / HOW TO CHOOSE</p>
+        <h2>製品ではなく、判断軸を比べる。</h2>
+      </div>
+      <div class="knowledge-grid">
+        <a class="knowledge-card" href="products-v3.html"><strong>人形 vs 四足</strong><small>作業、移動、安定性、費用を比較</small></a>
+        <a class="knowledge-card" href="task-lab-automation.html"><strong>固定アーム vs 移動式人形</strong><small>精度と柔軟性のどちらを優先するか</small></a>
+        <a class="knowledge-card" href="guide-vla-data-collection.html"><strong>テレオペ vs 自律</strong><small>初期運用と学習データを分けて考える</small></a>
+        <a class="knowledge-card" href="resources.html?type=sdk"><strong>SDK・ROS 2の確認</strong><small>公開有無ではなく、必要な制御権限を見る</small></a>
+        <a class="knowledge-card" href="guide-robot-poc.html"><strong>PoCをやるべきか</strong><small>成功条件、KPI、撤退条件を先に決める</small></a>
+        <a class="knowledge-card" href="guide-humanoid-robot-price.html"><strong>価格差の見方</strong><small>本体以外の開発・保守・輸送を含める</small></a>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-head">
+        <p class="kicker">03 / HOW TO START</p>
+        <h2>最初の一歩を、実務単位にする。</h2>
+      </div>
+      <div class="decision-steps">
+        <article><b>01</b><h3>課題を1文にする</h3><p>誰が、どこで、何を、どの頻度で行うかを整理します。</p></article>
+        <article><b>02</b><h3>成功条件を決める</h3><p>精度、時間、安全、費用、継続運用の基準を決めます。</p></article>
+        <article><b>03</b><h3>2〜3案を比較する</h3><p>形態、メーカー、構成、未確認事項を同じ表で比べます。</p></article>
+        <article><b>04</b><h3>PoCか購入かを判断する</h3><p>不確実性が高い場合だけPoCを設計します。</p></article>
+      </div>
+    </section>
+
+    <section class="section navy">
+      <div class="section-head">
+        <p class="kicker light">AIRADMIN8 SUPPORT</p>
+        <h2>調べる時間を減らし、判断を前に進める。</h2>
+        <p class="lead">製品候補、SDK、見積、大学購買、PoC条件を一つの流れで整理します。</p>
+      </div>
+      <div class="center-cta">
+        <a class="btn white" href="contact.html?intent=research-selection">研究テーマから候補を出す</a>
+        <a class="btn ghost" href="products-v3.html">製品を比較する</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div>
+      <strong>AirAdmin8 Robotics</strong>
+      <p>AIロボットを、選ぶ・つなぐ・実装する。</p>
+    </div>
+    <div></div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
