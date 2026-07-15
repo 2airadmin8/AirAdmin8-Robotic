@@ -59,7 +59,7 @@
     ['manufacturers.html', 'メーカー・資料', pageGroups.manufacturers.has(currentPage)],
     ['knowledge-hub.html', '判断ハブ', pageGroups.knowledge.has(currentPage)],
     ['service-packages.html', '支援・事例', pageGroups.services.has(currentPage)],
-    ['contact.html', '相談する', currentPage === 'contact.html', true]
+    ['contact.html', '導入を相談する', currentPage === 'contact.html', true]
   ];
 
   const footerItems = [
@@ -72,7 +72,7 @@
     ['service-packages.html', '支援パッケージ'],
     ['case-university-selection.html', '支援事例'],
     ['safety-support.html', '安全・保守'],
-    ['contact.html', 'お問い合わせ']
+    ['contact.html', '相談・お問い合わせ']
   ];
 
   /**
@@ -119,9 +119,11 @@
 
   /**
    * 全ページのフッターリンクを同じ順序へ統一します。
+   * 専用クラスを付与し、旧CSSの影響を受けにくくします。
    */
   function renderFooterLinks() {
     document.querySelectorAll('footer > div:last-child').forEach((container) => {
+      container.classList.add('footer-links');
       container.innerHTML = footerItems
         .map(([href, label]) => `<a href="${href}">${label}</a>`)
         .join('');
