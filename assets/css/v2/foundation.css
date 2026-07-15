@@ -1,0 +1,84 @@
+/* ============================================================
+ * AirAdmin8 Robotics V2 / Foundation
+ * ------------------------------------------------------------
+ * 色、余白、文字、角丸、影など、全ページで共通利用する設計値を定義します。
+ * 画面固有の見た目はここに書かず、後続のCSSへ分離します。
+ * ============================================================ */
+
+:root {
+  --a8-color-primary: #009ad2;
+  --a8-color-primary-dark: #087493;
+  --a8-color-navy: #0c3448;
+  --a8-color-ink: #0f1d25;
+  --a8-color-muted: #687982;
+  --a8-color-surface: #ffffff;
+  --a8-color-surface-soft: #f3f9fc;
+  --a8-color-border: #dce8ed;
+  --a8-color-focus: #66c9eb;
+
+  --a8-font-sans: "Noto Sans JP", "Hiragino Kaku Gothic ProN", system-ui, sans-serif;
+
+  --a8-space-1: 4px;
+  --a8-space-2: 8px;
+  --a8-space-3: 12px;
+  --a8-space-4: 16px;
+  --a8-space-5: 24px;
+  --a8-space-6: 32px;
+  --a8-space-7: 48px;
+  --a8-space-8: 72px;
+  --a8-space-9: 96px;
+
+  --a8-radius-sm: 12px;
+  --a8-radius-md: 20px;
+  --a8-radius-lg: 28px;
+  --a8-radius-pill: 999px;
+
+  --a8-shadow-sm: 0 8px 24px rgba(12, 52, 72, 0.06);
+  --a8-shadow-md: 0 18px 42px rgba(12, 52, 72, 0.08);
+
+  --a8-content-width: 1200px;
+  --a8-header-height: 72px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  color: var(--a8-color-ink);
+  background: var(--a8-color-surface);
+  font-family: var(--a8-font-sans);
+  line-height: 1.7;
+  overflow-x: hidden;
+}
+
+img,
+picture,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+:focus-visible {
+  outline: 3px solid var(--a8-color-focus);
+  outline-offset: 3px;
+}
