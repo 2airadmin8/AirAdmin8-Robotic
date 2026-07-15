@@ -1,0 +1,124 @@
+/* ============================================================
+ * AirAdmin8 Robotics V2 / Responsive
+ * ------------------------------------------------------------
+ * PC、タブレット、スマートフォンの表示差分を管理します。
+ * モバイルでは情報量を減らし、可読性と操作性を優先します。
+ * ============================================================ */
+
+@media (max-width: 1000px) {
+  nav {
+    position: absolute;
+    top: var(--a8-header-height);
+    left: 0;
+    right: 0;
+    display: none;
+    padding: 20px;
+    flex-direction: column;
+    background: #ffffff;
+    border-bottom: 1px solid var(--a8-color-border);
+    box-shadow: var(--a8-shadow-md);
+  }
+
+  nav.is-open {
+    display: flex;
+  }
+
+  footer {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  footer > div:last-child {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  :root {
+    --a8-header-height: 68px;
+  }
+
+  header {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .brand-mark {
+    width: 36px;
+    height: 36px;
+    flex-basis: 36px;
+  }
+
+  .brand-name {
+    max-width: 230px;
+    font-size: 0.95rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .section {
+    padding-top: 64px;
+    padding-bottom: 64px;
+  }
+
+  .section-head {
+    margin-bottom: 28px;
+  }
+
+  .section h2,
+  .subhero h1,
+  .hero h1,
+  .hero-v6 h1 {
+    font-size: clamp(2.35rem, 10vw, 3.4rem);
+    line-height: 1.12;
+    letter-spacing: -0.035em;
+    overflow-wrap: anywhere;
+  }
+
+  .actions,
+  .center-cta {
+    display: grid;
+    gap: 12px;
+  }
+
+  .btn {
+    width: 100%;
+  }
+
+  .product-strip,
+  .quick-grid,
+  .grid4,
+  .grid5,
+  .choice-flow,
+  .cards,
+  .compare-panel,
+  .contact-grid,
+  .form {
+    grid-template-columns: 1fr !important;
+  }
+
+  .product-strip article,
+  .quick-card,
+  .card,
+  .choice-flow > div,
+  .form {
+    min-width: 0;
+  }
+
+  footer {
+    padding: 40px 24px;
+  }
+
+  footer > div:last-child {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px 20px;
+  }
+
+  .cookie-consent,
+  .cookie-banner,
+  [data-cookie-banner] {
+    right: 16px;
+    bottom: 16px;
+    width: calc(100vw - 32px);
+  }
+}
