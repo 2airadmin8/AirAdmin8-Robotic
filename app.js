@@ -12,13 +12,17 @@
     'assets/css/v2/foundation.css',
     'assets/css/v2/layout.css',
     'assets/css/v2/components.css',
+    'assets/css/v2/knowledge.css',
     'assets/css/v2/responsive.css'
   ];
 
   const modulePaths = [
     'analytics.js',
+    'brand-ui.js',
     'scripts/navigation.js',
     'scripts/page-enhancements.js',
+    'scripts/product-status.js',
+    'scripts/cta-rules.js',
     'scripts/resources-search.js',
     'scripts/resources-seo.js',
     'scripts/contact-form.js'
