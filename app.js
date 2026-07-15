@@ -251,7 +251,7 @@ if (currentPage === 'product-agibot-g2.html') {
  */
 const brandPath = 'M 94 126 L 84 138 L 78 154 L 78 170 L 81 180 L 86 189 L 137 240 L 152 249 L 159 251 L 171 252 L 187 248 L 197 242 L 205 234 L 209 228 L 214 215 L 214 210 L 215 209 L 214 195 L 211 186 L 205 176 L 194 166 L 181 160 L 171 159 L 170 158 L 155 160 L 144 165 L 134 173 L 128 181 L 119 203 L 117 205 L 101 189 L 105 179 L 113 165 L 123 154 L 134 146 L 151 139 L 164 137 L 149 122 L 141 118 L 128 115 L 114 116 L 105 119 Z M 237 164 L 230 154 L 219 143 L 209 136 L 198 131 L 195 124 L 187 112 L 174 99 L 160 90 L 147 85 L 132 82 L 116 82 L 115 83 L 105 84 L 93 88 L 83 93 L 72 101 L 64 109 L 54 123 L 49 134 L 45 150 L 45 159 L 44 160 L 45 170 L 34 174 L 24 180 L 17 186 L 8 198 L 5 204 L 1 218 L 1 236 L 5 250 L 13 263 L 23 273 L 37 281 L 53 285 L 64 285 L 80 281 L 94 273 L 108 258 L 115 265 L 129 275 L 140 280 L 154 284 L 174 285 L 175 284 L 182 284 L 199 279 L 215 270 L 230 256 L 237 246 L 242 236 L 246 224 L 247 214 L 248 213 L 247 191 L 242 174 Z M 59 217 L 62 224 L 69 227 L 61 232 L 59 238 L 56 231 L 48 227 L 54 225 Z M 226 169 L 232 181 L 236 198 L 236 212 L 232 229 L 226 241 L 221 248 L 207 261 L 192 269 L 174 273 L 162 273 L 147 270 L 134 264 L 124 257 L 75 208 L 66 203 L 55 202 L 45 206 L 38 213 L 34 222 L 35 235 L 38 241 L 44 247 L 49 250 L 59 252 L 60 251 L 65 251 L 72 248 L 79 241 L 84 232 L 99 247 L 96 254 L 86 264 L 78 269 L 69 272 L 64 272 L 63 273 L 48 272 L 31 264 L 22 255 L 16 245 L 13 235 L 13 219 L 15 211 L 19 203 L 25 195 L 35 187 L 47 182 L 59 181 L 57 173 L 57 150 L 61 136 L 69 122 L 80 110 L 90 103 L 100 98 L 117 94 L 131 94 L 132 95 L 142 96 L 157 102 L 166 108 L 178 120 L 184 129 L 188 140 L 202 146 L 211 152 L 221 162 Z';
 
-const createBrandMark = (color = '#211714') => `
+const brandMark = (color = '#211714') => `
   <svg viewBox="0 0 248 286" aria-hidden="true" focusable="false">
     <path d="${brandPath}" fill="${color}" fill-rule="evenodd" />
   </svg>
@@ -260,7 +260,7 @@ const createBrandMark = (color = '#211714') => `
 const headerLogo = document.querySelector('header .logo');
 if (headerLogo) {
   headerLogo.innerHTML = `
-    <span class="brand-mark">${createBrandMark()}</span>
+    <span class="brand-mark">${brandMark()}</span>
     <span class="brand-name">AirAdmin8 Robotics</span>
   `;
   headerLogo.setAttribute('aria-label', 'AirAdmin8 Robotics ホーム');
@@ -268,7 +268,7 @@ if (headerLogo) {
 
 document.querySelectorAll('footer strong').forEach((element) => {
   element.innerHTML = `
-    <span class="footer-brand-mark">${createBrandMark('#ffffff')}</span>
+    <span class="footer-brand-mark">${brandMark('#ffffff')}</span>
     <span>AirAdmin8 Robotics</span>
   `;
 });
@@ -276,25 +276,73 @@ document.querySelectorAll('footer strong').forEach((element) => {
 const favicon = document.createElement('link');
 favicon.rel = 'icon';
 favicon.type = 'image/svg+xml';
-favicon.href = `data:image/svg+xml,${encodeURIComponent(
-  `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 248 286"><path d="${brandPath}" fill="#211714" fill-rule="evenodd"/></svg>`
-)}`;
+favicon.href = `data:image/svg+xml,${encodeURIComponent(`
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 248 286">
+    <path d="${brandPath}" fill="#211714" fill-rule="evenodd" />
+  </svg>
+`)}`;
 document.head.appendChild(favicon);
 
 const brandStyle = document.createElement('style');
 brandStyle.textContent = `
-  header .logo{display:flex;align-items:center;gap:12px}
-  .brand-mark{display:inline-flex;width:42px;height:42px;flex:0 0 42px}
-  .brand-mark svg{width:100%;height:100%}
-  .brand-name{font-weight:900;white-space:nowrap}
-  .footer-brand-mark{display:inline-flex;width:36px;height:36px;margin-right:10px;vertical-align:middle}
-  .footer-brand-mark svg{width:100%;height:100%}
-  footer strong{display:flex;align-items:center}
-  .navy .choice-flow div,.navy .choice-flow h3,.navy .choice-flow p,.navy .choice-flow small{color:#0b2533}
-  .navy .choice-flow b{color:#009bd2}
-  @media(max-width:640px){
-    .brand-name{font-size:1rem}
-    .brand-mark{width:36px;height:36px;flex-basis:36px}
+  header .logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .brand-mark {
+    display: inline-flex;
+    width: 42px;
+    height: 42px;
+    flex: 0 0 42px;
+  }
+
+  .brand-mark svg,
+  .footer-brand-mark svg {
+    width: 100%;
+    height: 100%;
+  }
+
+  .brand-name {
+    font-weight: 900;
+    white-space: nowrap;
+  }
+
+  .footer-brand-mark {
+    display: inline-flex;
+    width: 36px;
+    height: 36px;
+    margin-right: 10px;
+    vertical-align: middle;
+  }
+
+  footer strong {
+    display: flex;
+    align-items: center;
+  }
+
+  .navy .choice-flow div,
+  .navy .choice-flow h3,
+  .navy .choice-flow p,
+  .navy .choice-flow small {
+    color: #0b2533;
+  }
+
+  .navy .choice-flow b {
+    color: #009bd2;
+  }
+
+  @media (max-width: 640px) {
+    .brand-name {
+      font-size: 1rem;
+    }
+
+    .brand-mark {
+      width: 36px;
+      height: 36px;
+      flex-basis: 36px;
+    }
   }
 `;
 document.head.appendChild(brandStyle);
@@ -325,7 +373,7 @@ if (processSection) {
 
 /**
  * WADAX上のPHPエンドポイントへ問い合わせを送信します。
- * GitHub PagesではPHPが動作しないため、正式ドメインへの配備後に有効になります。
+ * HTMLが返ってきた場合は、PHP未配備またはサーバー設定不備として扱います。
  */
 const liveContactForm = document.querySelector('form[data-live-form]');
 if (liveContactForm) {
@@ -360,6 +408,13 @@ if (liveContactForm) {
         }
       });
 
+      const contentType = response.headers.get('content-type') || '';
+      if (!contentType.includes('application/json')) {
+        throw new Error(
+          '問い合わせ送信機能がサーバーに反映されていません。管理者へご連絡ください。'
+        );
+      }
+
       const result = await response.json();
       if (!response.ok || !result.ok) {
         throw new Error(result.message || '送信に失敗しました。');
@@ -367,7 +422,8 @@ if (liveContactForm) {
 
       liveContactForm.reset();
       if (statusElement) {
-        statusElement.textContent = 'お問い合わせを受け付けました。確認メールをお送りします。';
+        statusElement.textContent =
+          'お問い合わせを受け付けました。確認メールをお送りします。';
       }
 
       if (window.AirAdmin8Analytics) {
@@ -378,8 +434,11 @@ if (liveContactForm) {
         });
       }
     } catch (error) {
+      console.error('[AirAdmin8 Contact]', error);
       if (statusElement) {
-        statusElement.textContent = error.message || '送信できませんでした。時間をおいて再度お試しください。';
+        statusElement.textContent =
+          error.message ||
+          '送信できませんでした。時間をおいて再度お試しください。';
       }
     } finally {
       submitButton.disabled = false;
