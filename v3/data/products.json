@@ -1,0 +1,7 @@
+[
+  {"id":"agibot-g2","name":"AGIBOT G2","maker":"AGIBOT","category":"移動人型","status":"取扱中","uses":["人協働","案内","研究"],"summary":"移動しながら人と協働するモバイルヒューマノイド。"},
+  {"id":"unitree-g1d","name":"Unitree G1-D","maker":"Unitree","category":"人型","status":"見積対応","uses":["データ収集","VLA","研究"],"summary":"模倣学習・VLA向けデータ収集を想定した研究プラットフォーム。"},
+  {"id":"unitree-go2","name":"Unitree Go2","maker":"Unitree","category":"四足","status":"取扱中","uses":["巡回","点検","移動研究"],"summary":"巡回・点検・移動研究に使いやすい四足ロボット。"},
+  {"id":"agibot-link-x1","name":"AGIBOT Link X1","maker":"AGIBOT","category":"操作系","status":"条件付き対応","uses":["遠隔操作","データ収集"],"summary":"遠隔操作とデータ収集の構成候補。"},
+  {"id":"agibot-omnihand-pro","name":"AGIBOT OmniHand Pro","maker":"AGIBOT","category":"ロボットハンド","status":"条件付き対応","uses":["把持","操作","研究"],"summary":"多指把持・操作研究向けのロボットハンド。"}
+]
