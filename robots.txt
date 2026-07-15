@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://kan-0588.github.io/AirAdmin8-Robotic/sitemap.xml
