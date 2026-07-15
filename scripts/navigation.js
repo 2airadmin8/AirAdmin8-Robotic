@@ -32,7 +32,8 @@
       'manufacturer-unitree.html',
       'resources.html'
     ]),
-    guides: new Set([
+    knowledge: new Set([
+      'knowledge-hub.html',
       'robot-guide.html',
       'robot-guides.html',
       'guide-university-robot-purchase.html',
@@ -51,7 +52,7 @@
     ['solutions.html', '課題から探す', pageGroups.solutions.has(currentPage)],
     ['products-v3.html', '製品を比較する', pageGroups.products.has(currentPage)],
     ['manufacturers.html', 'メーカー・資料', pageGroups.manufacturers.has(currentPage)],
-    ['robot-guide.html', '導入ガイド', pageGroups.guides.has(currentPage)],
+    ['knowledge-hub.html', '判断ハブ', pageGroups.knowledge.has(currentPage)],
     ['support.html', '導入事例', pageGroups.support.has(currentPage)],
     ['contact.html', '相談する', currentPage === 'contact.html', true]
   ];
@@ -62,7 +63,7 @@
     ['products-v3.html', '製品比較'],
     ['manufacturers.html', 'メーカー'],
     ['resources.html', '開発資料'],
-    ['robot-guide.html', '導入ガイド'],
+    ['knowledge-hub.html', '判断ハブ'],
     ['case-university-selection.html', '支援事例'],
     ['support.html', '導入・サポート'],
     ['contact.html', 'お問い合わせ']
